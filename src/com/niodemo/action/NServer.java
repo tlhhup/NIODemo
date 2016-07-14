@@ -52,7 +52,7 @@ public class NServer {
 					ByteBuffer buffer=ByteBuffer.allocate(1024);
 					String content="";
 					try {
-						while(socketChannel.read(buffer)>0){
+						while(socketChannel.read(buffer)>0){//此处读取到数据则为正数
 							//锁定，准备输出
 							buffer.flip();
 							
